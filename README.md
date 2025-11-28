@@ -2,7 +2,7 @@
 This is a simple bank application replica. It demonstrates core banking features
 
 Functionalities such as: <br>
-• User Login System
+• User Login System <br>
    Login using a predefined username and PIN.
 
 • Account Overview <br>
