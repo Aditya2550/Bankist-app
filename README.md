@@ -1,7 +1,7 @@
 ## **Bankist — A Simple Banking Application**
 This is a simple bank application replica. It demonstrates core banking features
 
-Functionalities such as:
+Functionalities such as: <br>
 • User Login System
    Login using a predefined username and PIN.
 
