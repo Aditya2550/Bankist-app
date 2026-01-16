@@ -21,4 +21,4 @@ Functionalities such as: <br>
    Request a loan based on certain eligibility conditions.
 
 • Close Account <br>
-   Delete an account permanently using the username and PIN.
+   Delete an account permanently using the username and PIN witnout hastle.
