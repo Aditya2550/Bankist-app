@@ -157,8 +157,8 @@ const displayMovements = function (acc, sort = false) {
     const html = ` 
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
-      i + 1
-    } ${type}</div>
+          i + 1
+        } ${type}</div>
         <div class="movements__date">${displayDate}</div>
         <div class="movements__value">${formattedMov}</div>
       </div>
@@ -185,7 +185,7 @@ const calcDisplaySummary = function (acc) {
   labelSumOut.textContent = formatCur(
     Math.abs(outcomes),
     acc.locale,
-    acc.currency
+    acc.currency,
   );
 
   const interest = acc.movements
@@ -257,7 +257,7 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
 
   currentAccount = accounts.find(
-    acc => acc.username === inputLoginUsername.value
+    acc => acc.username === inputLoginUsername.value,
   );
   console.log(currentAccount);
 
@@ -278,7 +278,7 @@ btnLogin.addEventListener('click', function (e) {
 
     labelDate.textContent = new Intl.DateTimeFormat(
       currentAccount.locale,
-      options
+      options,
     ).format(now);
 
     inputLoginUsername.value = inputLoginPin.value = '';
@@ -303,7 +303,7 @@ btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = +inputTransferAmount.value;
   const receiverAcc = accounts.find(
-    acc => acc.username === inputTransferTo.value
+    acc => acc.username === inputTransferTo.value,
   );
   inputTransferAmount.value = inputTransferTo.value = '';
 
@@ -335,7 +335,7 @@ btnClose.addEventListener('click', function (e) {
     +inputClosePin.value === currentAccount.pin
   ) {
     const index = accounts.findIndex(
-      acc => acc.username === currentAccount.username
+      acc => acc.username === currentAccount.username,
     );
     console.log(index);
     // Delete account
@@ -371,7 +371,7 @@ btnLoan.addEventListener('click', function (e) {
       // Reset timer
       clearInterval(timer);
       timer = startLogOutTimer();
-    }, 2500);
+    }, 2600);
   }
   inputLoanAmount.value = '';
 });
